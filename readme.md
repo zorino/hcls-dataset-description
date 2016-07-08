@@ -1,6 +1,8 @@
 HCLS Dataset Descriptions statistics scripts
 ====
 
+This is a work in progress.
+
 ## Statistics - hcls-dd.rb
 
 Scripts to produce statistics over a SPARQL endpoint that are compliant with the W3C Dataset Descriptions for Health Care and Life Sciences (HCLS) as provided by the HCLS interest group. See https://www.w3.org/TR/hcls-dataset/
@@ -49,8 +51,29 @@ hcls-output.rb <hcld-dd_output.json> <prefixes.tsv>
 
 We highly recommend to use prefixes for all the type and predicate to get a cleaner visualization output.
 
+This will generate a directory rdf-stats/ with a subdirectory by graph (see ./example/rdf-stats/).
+
+A graph directory contains 7 table files (TSV) :
+* basic_metrics.tsv
+* datatypes.tsv
+* object-type_property.tsv
+* properties.tsv
+* subject-type_property.tsv
+* type-type_property.tsv
+* types.tsv
+
+and 1 javascript file : type-type_property_graph.js
+
+Replace the ./type-graphs-html/graph.js with the type-type_property_graph.js and open ./type-graphs-html/index.html file to visualize it.
+
 
 ## Example
 
 See the ./example/ directory
+
+
+## TODO
+
+* Test and validate the RDF graph output
+* Merge hcls-output.rb into hcls-dd.rb and add CLI options
 
