@@ -7,7 +7,7 @@ This is a work in progress.
 
 Scripts to produce statistics over a SPARQL endpoint that are compliant with the W3C Dataset Descriptions for Health Care and Life Sciences (HCLS) as provided by the HCLS interest group. See https://www.w3.org/TR/hcls-dataset/
 
-Note that the script will be computed the statistics for each graph in the endpoint individually.
+Note that the script will compute the statistics for each graph in the endpoint individually.
 
 ```
 ruby hcls-dd.rb
