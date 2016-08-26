@@ -53,7 +53,7 @@ hcls = JSON.parse(File.read(ARGV[0]))
 # output directory
 root = "rdf-stats/"
 if ! Dir.exists? root
-  Dir.mkdir(root)  
+  Dir.mkdir(root)
 end
 
 
@@ -61,7 +61,7 @@ end
 hcls.each do |k,v|
   next if virtuoso_graphs.include? "#{k}"
 
-  outdir = k.gsub("http://","")
+  outdir = k.gsub("http://","").gsub("/","__")
   puts outdir
   basic_metrics = {}
 
